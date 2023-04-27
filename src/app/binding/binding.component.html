@@ -1,0 +1,7 @@
+<input type="text" placeholder="Type Here" [(ngModel)]="inputValue" />
+
+<p>{{ inputValue }}</p>
+
+<button [disabled]="inputValue === ''" (click)="onResetInputClicked()">
+  Reset Input
+</button>
