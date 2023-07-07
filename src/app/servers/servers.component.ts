@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
@@ -10,6 +10,8 @@ export class ServersComponent implements OnInit {
   public serverCreationStatus = 'No server created';
   public serverInputName = 'TestServer';
   public servers = ['TestServer', 'TestServer 2'];
+  public toggleDisplay: boolean = false;
+  public logs = [];
 
   constructor() {
     setTimeout(() => {
@@ -22,5 +24,12 @@ export class ServersComponent implements OnInit {
   public onCreateServer() {
     this.serverCreationStatus = `Server was created! Name is: ${this.serverInputName}`;
     this.servers.push(this.serverInputName);
+  }
+
+  public onToggleDisplay(): void {
+    this.toggleDisplay = !this.toggleDisplay;
+    let currentLog = this.toggleDisplay;
+    this.logs.push(currentLog);
+    console.log(this.logs);
   }
 }

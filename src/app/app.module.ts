@@ -10,7 +10,14 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { BindingComponent } from './binding/binding.component';
 
 @NgModule({
-  declarations: [AppComponent, ServerComponent, ServersComponent, WarningAlertComponent, SuccessAlertComponent, BindingComponent],
+  declarations: [
+    AppComponent,
+    ServerComponent,
+    ServersComponent,
+    WarningAlertComponent,
+    SuccessAlertComponent,
+    BindingComponent,
+  ],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
